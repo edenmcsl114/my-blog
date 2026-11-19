@@ -2,7 +2,7 @@
 layout: ../layouts/PageLayout.astro
 title: "关于我"
 coverTitle: "关于我"
-date: 2025-01-03 01:01:33
+date: 2026-11-19 00:00:00
 description: "关于 Eden 与这个网站"
 ---
 

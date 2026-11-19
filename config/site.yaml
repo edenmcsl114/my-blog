@@ -13,7 +13,7 @@
 site:
   title: Edenの博客 # 网站名称
   alternate: EDEN # 网站英文名称 用于页脚、Logo、@ handle 等
-  subtitle: Edenの博客 # 网站副标题
+  subtitle:  # 网站副标题
   name: Eden # 作者名称
   description: 记录所见，探索未知。 # 网站描述
   avatar: /img/avatar.webp # 网站头像
@@ -51,13 +51,13 @@ i18n:
   locales:
     - code: zh
       label: 中文
-    - code: en
-      label: English
-      # enabled: false  # 内容存在但暂时禁用（保留内容但不生成路由）
-    - code: ja
-      label: 日本語
-    - code: ko
-      label: 한국어
+    # 暂时只保留中文；以后需要多语言时再取消下面语言的注释
+    # - code: en
+    #   label: English
+    # - code: ja
+    #   label: 日本語
+    # - code: ko
+    #   label: 한국어
 
 # =============================================================================
 # Category Map
@@ -70,13 +70,27 @@ categoryMap:
   ACG: acg
   随笔: life
   技术: tech
-  # 子分类（配合主分类使用，例如 [技术, 笔记]）
+  # 子分类规划（文章 frontmatter 用嵌套数组，例如 [技术, 笔记]）
+  # 项目：开发日志 / 作品 / 开源
+  开发日志: devlog
+  作品: works
+  开源: open-source
+  # ACG：番剧 / Galgame / 漫画 / 音乐
+  番剧: anime
+  Galgame: galgame
+  漫画: manga
+  音乐: acg-music
+  # 随笔：日常 / 思考 / 游记
+  日常: daily
+  思考: thoughts
+  游记: travel
+  # 技术：笔记 / 教程 / 工具 / 前端 / 运维 / AI
   笔记: note
+  教程: tutorial
   工具: tools
   前端: front-end
-  CSS: css
-  番剧: anime
-  周刊: weekly
+  运维: ops
+  AI: ai
 
 # =============================================================================
 # Featured Categories (Homepage)
@@ -123,32 +137,7 @@ featuredCategories:
 #   highlightOnHome: 是否在首页高亮显示最新文章（可选，默认 true，显式设为 false 可禁用）
 #   links: 相关链接配置（可选）
 # -----------------------------------------------------------------------------
-featuredSeries:
-  - slug: weekly # URL 路径: /weekly
-    categoryName: 周刊 # 必须与 categoryMap 中的分类名匹配
-    label: 我的周刊 # 简短名称
-    fullName: 我的技术周刊 # 完整名称
-    description: | # 支持多行 Markdown
-      这是周刊/系列文章功能的示例配置。
-      你可以用它来发布定期更新的系列内容，如技术周刊、读书笔记系列等。
-      设置 enabled: false 可以关闭此功能。
-    cover: /img/weekly_header.webp # 系列页面头图
-    enabled: false # 示例周刊已移除，先关闭此系列
-    icon: ri:newspaper-line # 导航图标
-    links: # 相关链接（可选）
-      github: https://github.com/edenmcsl114/my-blog # (可选) GitHub 仓库
-      rss: /rss.xml # (可选) RSS 订阅链接
-      # chrome: https://chromewebstore.google.com/detail/your-extension-id # (可选) 浏览器插件
-      # docs: https://your-docs-url # (可选) 文档链接
-  # 示例：添加第二个系列（取消注释启用）
-  # - slug: reading # URL 路径: /reading
-  #   categoryName: 书摘
-  #   label: 读书笔记
-  #   fullName: 我的读书笔记
-  #   description: 阅读记录与读后感
-  #   cover: /img/weekly_header.webp # 记得添加，我这里就是个示例
-  #   enabled: true
-  #   icon: ri:book-read-line
+# 目前不启用系列功能；需要时按上面的字段说明添加 featuredSeries 配置。
 
 # =============================================================================
 # Social Links
@@ -291,7 +280,7 @@ announcements:
      content: 目前只是试部署，还没有完善。预计2周后完成施工，敬请期待
      type: warning
      priority: 8
-     publishDate: '2025-12-28'
+     publishDate: '2026-11-19'
   # - id: site-update
   #   title: 站点更新公告
   #   content: 公告系统已升级，现支持多条公告同时显示！
@@ -401,7 +390,7 @@ moments:
 # 使用本地 CMS 编辑文章时也需要开启；修改后重启开发服务器或重新构建
 # =============================================================================
 editor:
-  enabled: true
+  enabled: false
 
 # =============================================================================
 # Colophon (落款)
@@ -506,7 +495,7 @@ colophon:
 postActions:
   copyMarkdown: true
   downloadMarkdown: true
-  openInEditor: everyone
+  openInEditor: off
 
 # =============================================================================
 # Navigation Routes
@@ -659,20 +648,22 @@ navigation:
     # path: # 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
     # lang: # 语言 (默认: 'zh-CN')
 comment:
-  provider: none  # 'remark42' | 'giscus' | 'waline' | 'twikoo' | 'none'
+  provider: giscus  # 'remark42' | 'giscus' | 'waline' | 'twikoo' | 'none'
   # remark42:
   #   host: https://comment.example.com/
   #   siteId: your-site-id
-  # giscus:
-  #   repo: username/repo              # GitHub 仓库名 (owner/repo 格式)
-  #   repoId: R_kgDOxxxxxx             # 仓库 ID (从 giscus.app 获取)
-  #   category: Announcements          # Discussion 分类名称
-  #   categoryId: DIC_kwDOxxxxxx       # 分类 ID (从 giscus.app 获取)
-  #   mapping: pathname                # 映射方式
-  #   reactionsEnabled: '1'            # 启用 reactions ('0' | '1')
-  #   emitMetadata: '0'                # 发送元数据 ('0' | '1')
-  #   inputPosition: top               # 输入框位置 ('top' | 'bottom')
-  #   lang: zh-CN                      # 语言
+  giscus:
+    repo: edenmcsl114/my-blog          # GitHub 仓库名 (owner/repo 格式)
+    repoId: R_kgDOVxyFpQ               # 仓库 ID
+    category: Announcements            # Discussion 分类名称
+    categoryId: DIC_kwDOVxyFpc4DLd5W   # Announcements 分类 ID
+    mapping: pathname                  # 映射方式
+    strict: '0'                        # 严格标题匹配 ('0' | '1')
+    reactionsEnabled: '1'              # 启用 reactions ('0' | '1')
+    emitMetadata: '0'                  # 发送元数据 ('0' | '1')
+    inputPosition: bottom              # 输入框位置 ('top' | 'bottom')
+    lang: zh-CN                        # 语言
+    loading: lazy                      # 加载方式 ('lazy' | 'eager')
 
   # waline:
   #   serverURL: https://your-waline.vercel.app  # Waline 服务端地址 (必填)
@@ -711,12 +702,6 @@ comment:
   #   # turnstileKey: ''               # Cloudflare Turnstile Key (可选)
   #   # locale:                        # 自定义语言显示 (可选)
   #   #   placeholder: '请留言...'      # 自定义输入框占位文本
-  twikoo:
-    envId: https://your-twikoo.vercel.app  # Twikoo 环境 ID (腾讯云) 或 Vercel 环境地址 (必填)
-    # region: ap-shanghai              # 环境地域，默认为 ap-shanghai
-    # path: location.pathname          # 用于区分不同文章的自定义 js 路径
-    # lang: zh-CN                     # 语言 (默认: 'zh-CN')
-
 # =============================================================================
 # Analytics (Umami)
 # =============================================================================
