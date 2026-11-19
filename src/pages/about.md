@@ -1,34 +1,33 @@
 ---
 layout: ../layouts/PageLayout.astro
-title: "About"
+title: "关于我"
 coverTitle: "关于我"
 date: 2025-01-03 01:01:33
-description: "关于我？"
+description: "关于 Eden 与这个网站"
 ---
 
-## 你好，这里是余弦
+你好，我是 Eden。
 
-[![github badge](https://img.shields.io/badge/dynamic/json?color=blue&label=Github&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dyusixian)](https://github.com/yusixian)
+一个对技术、互联网和二次元文化抱有浓厚兴趣的普通探索者。
 
-cosine = 余弦 = cos
+我喜欢折腾各种新鲜事物，从 Linux、网络技术、服务器部署，到 AI、开源项目和各种有趣的工具。相比单纯地了解理论，我更喜欢亲自动手，把感兴趣的想法变成现实。
 
-愿热情永存，愿热爱不灭，愿生活无憾
+除此之外，我也是一名 Galgame 和动漫爱好者。喜欢那些能够留下深刻印象的故事，也喜欢在音乐、文字与画面中寻找触动自己的瞬间。
 
-> 我们 都只是无名之辈 \
-> 做你自己最喜欢的事 \
-> 像花一样 肆意绽放 \
-> 不去管 有没有人欣赏
+我对世界始终保持着好奇。喜欢探索未知的事物，也向往自由自在的生活。希望有一天能够去更多地方走走看看，体验不同的风景与生活。
 
-### 找到我
+## 关于这个网站
 
-个人 Telegram 前端频道：日常碎碎念，偶尔掉落优质前端博文推荐、学习资源等
+建立这个网站，最初只是想拥有一个属于自己的网络空间。
 
-https://t.me/cosine_front_end
+这里没有特别明确的主题，也不打算把自己限制在某个领域。
 
-Gitbook 前端学习记录
+我会在这里分享技术折腾的过程、记录遇到的问题与解决方案，写下一些关于动漫、Galgame 的感想，也会留下一些日常生活中的想法和发现。
 
-https://book.cosine.ren/
+有些内容可能很有用，有些可能只是某个时刻突然产生的念头。
 
-[![GitHub State](https://git-stats.cosine.ren/api?username=yusixian&theme=dark&show_icons=true&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+无论如何，我希望它们都能在这里留下痕迹。
 
-[![GitHub Streak](https://github-readme-streak-stats-rust-tau.vercel.app?user=yusixian&theme=dark&date_format=%5BY%20%5DM%20&hide_border=true)](https://git.io/streak-stats)
+## **记录所见，探索未知**
+
+欢迎来到我的小小角落。

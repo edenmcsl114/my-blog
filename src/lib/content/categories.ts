@@ -2,7 +2,7 @@
  * Category-related utility functions
  */
 
-import { categoryMap } from '@lib/config/site';
+import { categoryMap, siteConfig } from '@lib/config/site';
 import { getContentFeaturedCategoryField, getContentSeriesField } from '@/i18n/content';
 import type { Locale } from '@/i18n/types';
 import { encodeSlug } from '../url';
@@ -59,6 +59,17 @@ export async function getCategoryList(locale?: string): Promise<CategoryListResu
         countMap[firstCategory] = (countMap[firstCategory] || 0) + 1;
         addCategoryRecursively(resCategories, [], firstCategory);
       }
+    }
+
+    // Keep configured featured categories routable before their first post exists.
+    for (const featured of siteConfig.featuredCategories ?? []) {
+      const names = featured.link
+        .split('/')
+        .map((slug) => slugToName.get(slug))
+        .filter((name): name is string => Boolean(name));
+      names.forEach((name, index) => {
+        addCategoryRecursively(resCategories, names.slice(0, index), name);
+      });
     }
 
     return { categories: resCategories, countMap };

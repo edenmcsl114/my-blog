@@ -14,7 +14,10 @@
 
 en:
   categories:
+    project: Projects
+    acg: ACG
     life: Life
+    tech: Tech
     note: Notes
     tools: Tools
     weekly: Weekly
@@ -28,18 +31,18 @@ en:
       fullName: My Tech Weekly
 
   featuredCategories:
+    project:
+      label: Projects
+      description: Project logs, builds, and portfolio
+    acg:
+      label: ACG
+      description: Anime, comics, games, and related essays
     life:
       label: Life
       description: Life journals and essays
-    note:
-      label: Notes
-      description: Technical and study notes
-    note/front-end:
-      label: Frontend
-      description: Frontend technologies
-    tools:
-      label: Tools
-      description: Tool usage and productivity
+    tech:
+      label: Tech
+      description: Technical notes, development, and tools
 
   colophon:
     groups:
@@ -54,7 +57,10 @@ en:
 
 ja:
   categories:
+    project: プロジェクト
+    acg: ACG
     life: 日常
+    tech: 技術
     note: ノート
     tools: ツール
     weekly: 週刊
@@ -68,18 +74,18 @@ ja:
       fullName: テック週間ダイジェスト
 
   featuredCategories:
+    project:
+      label: プロジェクト
+      description: プロジェクトの記録、開発ログ、作品アーカイブ
+    acg:
+      label: ACG
+      description: アニメ、漫画、ゲームと関連エッセイ
     life:
       label: 日常
       description: 日常の記録とエッセイ
-    note:
-      label: ノート
-      description: 技術と学習のノート
-    note/front-end:
-      label: フロントエンド
-      description: フロントエンド技術
-    tools:
-      label: ツール
-      description: ツールの使い方と生産性
+    tech:
+      label: 技術
+      description: 技術ノート、開発実践、ツール
 
   colophon:
     groups:
@@ -94,7 +100,10 @@ ja:
 
 ko:
   categories:
+    project: 프로젝트
+    acg: ACG
     life: 에세이
+    tech: 기술
     note: 노트
     tools: 도구
     weekly: 주간지
@@ -108,18 +117,18 @@ ko:
       fullName: 나의 기술 주간지
 
   featuredCategories:
+    project:
+      label: 프로젝트
+      description: 프로젝트 기록, 개발 일지, 작품 아카이브
+    acg:
+      label: ACG
+      description: 애니메이션, 만화, 게임과 관련 에세이
     life:
       label: 에세이
       description: 일상 기록, 이런저런 생각들
-    note:
-      label: 노트
-      description: 기술 노트, 학습 노트
-    note/front-end:
-      label: 프론트엔드
-      description: 프론트엔드 기술 관련
-    tools:
-      label: 도구
-      description: 도구 사용법, 효율성 향상
+    tech:
+      label: 기술
+      description: 기술 노트, 개발 실천, 도구
   colophon:
     groups:
       authorship: 집필
