@@ -286,12 +286,12 @@ announcements:
   #     url: https://example.com
   #     text: 了解更多
   #     external: true # 新窗口打开
-  # - id: maintenance-notice
-  #   title: 系统维护通知
-  #   content: 计划于本周末进行系统维护，届时可能短暂无法访问。
-  #   type: warning
-  #   priority: 8
-  #   publishDate: '2025-12-28'
+   - id: maintenance-notice
+     title: 系统维护通知
+     content: 目前只是试部署，还没有完善。预计2周后完成施工，敬请期待
+     type: warning
+     priority: 8
+     publishDate: '2025-12-28'
   # - id: site-update
   #   title: 站点更新公告
   #   content: 公告系统已升级，现支持多条公告同时显示！
@@ -764,13 +764,13 @@ seo:
 bgm:
   enabled: false  # (有 audio 时自动启用，显式 false 可禁用)
   # metingApi: https://163.hyc.moe/  # Meting API 地址，默认为 https://163.hyc.moe/，推荐自部署
-  audio:
-    - title: 最爱山山
-      list:
-        - https://music.163.com/playlist?id=8676645748
-    - title: Love Vocaloid
-      list:
-        - https://music.163.com/playlist?id=8882890045
+  #audio:
+  #  - title: 最爱山山
+  #    list:
+  #      - https://music.163.com/playlist?id=8676645748
+  #  - title: Love Vocaloid
+  #    list:
+  #      - https://music.163.com/playlist?id=8882890045
 
 christmas:
   enabled: false # 总开关
