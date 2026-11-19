@@ -13,7 +13,7 @@
 site:
   title: Edenの博客 # 网站名称
   alternate: EDEN # 网站英文名称 用于页脚、Logo、@ handle 等
-  subtitle:  # 网站副标题
+  subtitle: Welcome # 网站副标题
   name: Eden # 作者名称
   description: 记录所见，探索未知。 # 网站描述
   avatar: /img/avatar.webp # 网站头像

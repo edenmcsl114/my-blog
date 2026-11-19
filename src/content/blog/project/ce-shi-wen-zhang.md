@@ -11,3 +11,5 @@ colophon:
   - handwritten
 ---
 当你看到这篇文章，说明你能正常看到这个文章。好了，我要继续施工了
+
+![测试图片](https://pan.202548.xyz/file/web1/1795096325940_ScreenShot_2026-11-19_215142_002.png)
