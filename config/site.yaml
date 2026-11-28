@@ -277,10 +277,10 @@ announcements:
   #     external: true # 新窗口打开
    - id: maintenance-notice
      title: 系统维护通知
-     content: 目前只是试部署，还没有完善。预计2周后完成施工，敬请期待
+     content: 目前只是试部署，还没有完善。预计还要2周后完成施工，敬请期待
      type: warning
      priority: 8
-     publishDate: '2026-11-19'
+     publishDate: '2026-11-28'
   # - id: site-update
   #   title: 站点更新公告
   #   content: 公告系统已升级，现支持多条公告同时显示！
